@@ -4,22 +4,35 @@ public class Veiculo {
     private String Placa;
     private double TabelaFipe;
     private double CapacidadeDoTaque;
-    private double Velocidade;
+    private double VelocidadeAtual;
     private String Combustivel;
     private String Modelo;
     private String Marca;
+    public double Aceleracao;
 
     public Veiculo() {
     }
 
-    public Veiculo(String placa, double tabelaFipe, double capacidadeDoTaque, double velocidade, String combustivel, String modelo, String marca) {
+    public Veiculo(String placa, double tabelaFipe,
+                   double capacidadeDoTaque, double velocidadeAtual,
+                   String combustivel, String modelo, String marca) {
         Placa = placa;
         TabelaFipe = tabelaFipe;
         CapacidadeDoTaque = capacidadeDoTaque;
-        Velocidade = velocidade;
+        VelocidadeAtual = velocidadeAtual;
         Combustivel = combustivel;
         Modelo = modelo;
         Marca = marca;
+    }
+
+    public void AcelerarCarro() {
+        if(!(VelocidadeAtual >= 300)) {
+            VelocidadeAtual += Aceleracao;
+            System.out.println("Chegamos a " + getVelocidadeAtual() + "km/h!");
+        }
+        else {
+            System.out.println("Velocidade máxima atingida!");
+        }
     }
 
     public String getModelo() {
@@ -46,12 +59,12 @@ public class Veiculo {
         Combustivel = combustivel;
     }
 
-    public double getVelocidade() {
-        return Velocidade;
+    public double getVelocidadeAtual() {
+        return VelocidadeAtual;
     }
 
-    public void setVelocidade(double velocidade) {
-        Velocidade = velocidade;
+    public void setVelocidadeAtual(double velocidadeAtual) {
+        VelocidadeAtual = velocidadeAtual;
     }
 
     public double getCapacidadeDoTaque() {
