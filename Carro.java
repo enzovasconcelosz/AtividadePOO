@@ -1,17 +1,10 @@
-package Atividade1;
+package TrabalhoRicardo;
 
 public class Carro extends Veiculo {
     private int CapacidadePortaMalas;
 
-    public Carro() {
-    }
-
-    public Carro(String placa, double tabelaFipe,
-                 double capacidadeDoTaque, double velocidadeAtual,
-                 String combustivel, String modelo, String marca,
-                 int capacidadePortaMalas) {
-        super(placa, tabelaFipe, capacidadeDoTaque, velocidadeAtual,
-                combustivel, modelo, marca);
+    public Carro(String placa, double tabelaFipe, double capacidadeDoTaque, double velocidade, String combustivel, String modelo, String marca, int capacidadePortaMalas) {
+        super(placa, tabelaFipe, capacidadeDoTaque, velocidade, combustivel, modelo, marca);
         CapacidadePortaMalas = capacidadePortaMalas;
     }
 
@@ -23,4 +16,3 @@ public class Carro extends Veiculo {
         CapacidadePortaMalas = capacidadePortaMalas;
     }
 }
-

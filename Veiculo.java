@@ -1,14 +1,14 @@
-package Atividade1;
+package TrabalhoRicardo;
 
 public class Veiculo {
-    private String Placa;
-    private double TabelaFipe;
-    private double CapacidadeDoTaque;
-    private double VelocidadeAtual;
-    private String Combustivel;
-    private String Modelo;
-    private String Marca;
-    public double Aceleracao;
+    private String placa;
+    private double tabelaFipe;
+    private double capacidadeDoTaque;
+    private double velocidadeAtual;
+    private String combustivel;
+    private String modelo;
+    private String marca;
+    public double aceleracao;
 
     public Veiculo() {
     }
@@ -16,18 +16,18 @@ public class Veiculo {
     public Veiculo(String placa, double tabelaFipe,
                    double capacidadeDoTaque, double velocidadeAtual,
                    String combustivel, String modelo, String marca) {
-        Placa = placa;
-        TabelaFipe = tabelaFipe;
-        CapacidadeDoTaque = capacidadeDoTaque;
-        VelocidadeAtual = velocidadeAtual;
-        Combustivel = combustivel;
-        Modelo = modelo;
-        Marca = marca;
+        this.placa = placa;
+        this.tabelaFipe = tabelaFipe;
+        this.capacidadeDoTaque = capacidadeDoTaque;
+        this.velocidadeAtual = velocidadeAtual;
+        this.combustivel = combustivel;
+        this.modelo = modelo;
+        this.marca = marca;
     }
 
     public void AcelerarCarro() {
-        if(!(VelocidadeAtual >= 300)) {
-            VelocidadeAtual += Aceleracao;
+        if(!(this.velocidadeAtual >= 300)) {
+            this.velocidadeAtual += this.aceleracao;
             System.out.println("Chegamos a " + getVelocidadeAtual() + "km/h!");
         }
         else {
@@ -35,60 +35,59 @@ public class Veiculo {
         }
     }
 
-    public String getModelo() {
-        return Modelo;
-    }
-
-    public void setModelo(String modelo) {
-        Modelo = modelo;
-    }
-
-    public String getMarca() {
-        return Marca;
-    }
-
-    public void setMarca(String marca) {
-        Marca = marca;
-    }
-
-    public String getCombustivel() {
-        return Combustivel;
-    }
-
-    public void setCombustivel(String combustivel) {
-        Combustivel = combustivel;
-    }
-
-    public double getVelocidadeAtual() {
-        return VelocidadeAtual;
-    }
-
-    public void setVelocidadeAtual(double velocidadeAtual) {
-        VelocidadeAtual = velocidadeAtual;
-    }
-
-    public double getCapacidadeDoTaque() {
-        return CapacidadeDoTaque;
-    }
-
-    public void setCapacidadeDoTaque(double capacidadeDoTaque) {
-        CapacidadeDoTaque = capacidadeDoTaque;
-    }
-
     public String getPlaca() {
-        return Placa;
+        return placa;
     }
 
     public void setPlaca(String placa) {
-        Placa = placa;
+        this.placa = placa;
     }
 
     public double getTabelaFipe() {
-        return TabelaFipe;
+        return tabelaFipe;
     }
 
     public void setTabelaFipe(double tabelaFipe) {
-        TabelaFipe = tabelaFipe;
+        this.tabelaFipe = tabelaFipe;
     }
 
+    public double getCapacidadeDoTaque() {
+        return capacidadeDoTaque;
+    }
+
+    public void setCapacidadeDoTaque(double capacidadeDoTaque) {
+        this.capacidadeDoTaque = capacidadeDoTaque;
+    }
+
+    public double getVelocidadeAtual() {
+        return velocidadeAtual;
+    }
+
+    public void setVelocidadeAtual(double velocidadeAtual) {
+        this.velocidadeAtual = velocidadeAtual;
+    }
+
+    public String getCombustivel() {
+        return combustivel;
+    }
+
+    public void setCombustivel(String combustivel) {
+        this.combustivel = combustivel;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 }

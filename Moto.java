@@ -1,4 +1,4 @@
-package Atividade1;
+package TrabalhoRicardo;
 
 public class Moto extends Veiculo {
     private int Cilindradas;
@@ -7,8 +7,8 @@ public class Moto extends Veiculo {
         Cilindradas = cilindradas;
     }
 
-    public Moto(String placa, double tabelaFipe, double capacidadeDoTaque, double velocidade, String combustivel, String modelo, String marca, int cilindradas) {
-        super(placa, tabelaFipe, capacidadeDoTaque, velocidade, combustivel, modelo, marca);
+    public Moto(String placa2, double tabelaFipe2, double capacidadeDoTaque, double velocidade, String combustivel2, String modelo2, String marca2, int cilindradas) {
+        super(placa2, tabelaFipe2, capacidadeDoTaque, velocidade, combustivel2, modelo2, marca2);
         Cilindradas = cilindradas;
     }
 
@@ -20,3 +20,4 @@ public class Moto extends Veiculo {
         Cilindradas = cilindradas;
     }
 }
+
