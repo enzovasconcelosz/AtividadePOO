@@ -56,7 +56,7 @@ public class Caminhao extends Veiculo {
                 case 1:
                     System.out.println("Digite a quantidade a ser carregada:");
                     double quantidadeCarregada = scanner.nextDouble();
-                    if (quantidadeCarregada <= Carga) {
+                    if (quantidadeCarregada <= Carga && capacidadeDeCarga < Carga) {
                         capacidadeDeCarga += quantidadeCarregada;
                         System.out.println("Carga carregada com sucesso. Carga atual: " + capacidadeDeCarga);
                     } else {
@@ -66,7 +66,7 @@ public class Caminhao extends Veiculo {
                 case 2:
                     System.out.println("Digite a quantidade a ser descarregada:");
                     double quantidadeDescarregada = scanner.nextDouble();
-                    if (quantidadeDescarregada <= Carga) {
+                    if (quantidadeDescarregada <= Carga && capacidadeDeCarga > 0) {
                         capacidadeDeCarga -= quantidadeDescarregada;
                         System.out.println("Carga descarregada com sucesso. Carga atual: " + capacidadeDeCarga);
                     } else {
