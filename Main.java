@@ -46,6 +46,7 @@ public class Main {
                     do {
                         System.out.println("Menu de Seleção de funcionalidades do Carro");
                         System.out.println("1. Acelerar o carro");
+                        System.out.println("2. Inserir itens no porta malas");
                         System.out.println("0. Sair");
                         System.out.print("Digite o valor referente a opção: ");
                         opcao2 = scanner.nextInt();
@@ -55,6 +56,9 @@ public class Main {
                                 System.out.print("Em km/h, digite o valor da aceleracao: ");
                                 carro.aceleracao = scanner.nextDouble();
                                 carro.AcelerarCarro();
+                                break;
+                            case 2:
+                                carro.PreencherPortaMalas();
                                 break;
                             case 0:
                                 System.out.println("Finalizando...");
