@@ -9,13 +9,16 @@ public class Veiculo {
     private String modelo;
     private String marca;
     public double aceleracao;
+    private double quilometragem;
+    double addKm;
+
 
     public Veiculo() {
     }
 
     public Veiculo(String placa, double tabelaFipe,
                    double capacidadeDoTaque, double velocidadeAtual,
-                   String combustivel, String modelo, String marca) {
+                   String combustivel, String modelo, String marca, double quilometragem) {
         this.placa = placa;
         this.tabelaFipe = tabelaFipe;
         this.capacidadeDoTaque = capacidadeDoTaque;
@@ -23,6 +26,8 @@ public class Veiculo {
         this.combustivel = combustivel;
         this.modelo = modelo;
         this.marca = marca;
+        this.quilometragem= quilometragem;
+
     }
 
     public void AcelerarCarro() {
@@ -35,6 +40,13 @@ public class Veiculo {
         }
     }
 
+    public void AddKm(){
+        if(this.addKm >= 0);{
+            this.quilometragem += this.addKm;
+            System.out.println("A quilometragem foi alterada para " + getQuilometragem() + " km ");
+        }
+
+    }
     public String getPlaca() {
         return placa;
     }
@@ -90,4 +102,13 @@ public class Veiculo {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    public double getQuilometragem() {
+        return quilometragem;
+    }
+
+    public void setQuilometragem(double quilometragem) {
+        this.quilometragem = quilometragem;
+    }
+
 }

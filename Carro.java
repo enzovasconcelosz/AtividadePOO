@@ -6,8 +6,8 @@ public class Carro extends Veiculo {
     private int CapacidadePortaMalas;
     Scanner scanner = new Scanner(System.in);
 
-    public Carro(String placa, double tabelaFipe, double capacidadeDoTaque, double velocidade, String combustivel, String modelo, String marca, int capacidadePortaMalas) {
-        super(placa, tabelaFipe, capacidadeDoTaque, velocidade, combustivel, modelo, marca);
+    public Carro(String placa, double tabelaFipe, double capacidadeDoTaque, double velocidade, String combustivel, String modelo, String marca, int capacidadePortaMalas, double quilometragem) {
+        super(placa, tabelaFipe, capacidadeDoTaque, velocidade, combustivel, modelo, marca,quilometragem);
         CapacidadePortaMalas = capacidadePortaMalas;
     }
 
@@ -29,18 +29,18 @@ public class Carro extends Veiculo {
         int bolaDeFutebol = 0;
 
         while (opcao != 0 && CapacidadePortaMalas >= 6){
-        System.out.println("Seu porta malas possui " + getCapacidadePortaMalas() + "L de capacidade restante");
-        System.out.println("Menu de itens para inserir no porta malas");
-        System.out.println("1. Maleta de ferramentas");
-        System.out.println("2. Mala de viagens (G)");
-        System.out.println("3. Mala de viagens (M)");
-        System.out.println("4. Mala de viagens (P)");
-        System.out.println("5. Cooler de bebidas");
-        System.out.println("6. Bola de futebol");
-        System.out.println("7. Mostrar itens que estão no porta malas.");
-        System.out.println("0. Voltar");
-        System.out.print("Digite o valor referente a opção desejada: ");
-        opcao = scanner.nextInt();
+            System.out.println("Seu porta malas possui " + getCapacidadePortaMalas() + "L de capacidade restante");
+            System.out.println("Menu de itens para inserir no porta malas");
+            System.out.println("1. Maleta de ferramentas");
+            System.out.println("2. Mala de viagens (G)");
+            System.out.println("3. Mala de viagens (M)");
+            System.out.println("4. Mala de viagens (P)");
+            System.out.println("5. Cooler de bebidas");
+            System.out.println("6. Bola de futebol");
+            System.out.println("7. Mostrar itens que estão no porta malas.");
+            System.out.println("0. Voltar");
+            System.out.print("Digite o valor referente a opção desejada: ");
+            opcao = scanner.nextInt();
 
 
             switch (opcao){
@@ -142,6 +142,6 @@ public class Carro extends Veiculo {
         System.out.println("Seu porta malas está cheio!");
         System.out.println("Voltando ao menu anterior...");
     }
+
+
 }
-
-
